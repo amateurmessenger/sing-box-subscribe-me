@@ -223,7 +223,7 @@ def config(url):
         subscribe2['enabled'] = True
         subscribe2['subgroup'] = ''
         subscribe2['prefix'] = ''
-        subscribe2['User-Agent'] = 'v2rayng'
+        subscribe2['User-Agent'] = 'clashmeta'
         if len(url_parts) == 3:
             subscribe3['url'] = full_url.split('url=', 1)[-1].split('|')[2] if full_url.startswith('url') else full_url.split('|')[2]
             subscribe3['enabled'] = True
@@ -232,7 +232,7 @@ def config(url):
         subscribe['emoji'] = int(emoji_param) if emoji_param.isdigit() else subscribe.get('emoji', '')
         subscribe['tag'] = tag_param if tag_param else subscribe.get('tag', '')
         subscribe['prefix'] = pre_param if pre_param else subscribe.get('prefix', '')
-        subscribe['User-Agent'] = ua_param if ua_param else 'v2rayng'
+        subscribe['User-Agent'] = ua_param if ua_param else 'clashmeta'
     temp_json_data['exclude_protocol'] = eps_param if eps_param else temp_json_data.get('exclude_protocol', '')
     temp_json_data['config_template'] = unquote(file_param) if file_param else temp_json_data.get('config_template', '')
     #print (f"Custom Page for {url} with link={full_url}, emoji={emoji_param}, file={file_param}, tag={tag_param}, UA={ua_param}, prefix={pre_param}")
